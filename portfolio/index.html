@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailas Mande Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        header ul li {
+            margin: 0 15px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header ul li a:hover {
+            color: #74ebd5;
+        }
+
+        #home {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #1c1c1c, #3c3c3c);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .hero {
+            padding: 20px;
+            border: 5px solid #74ebd5;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.6);
+            animation: zoomIn 2s;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            background: linear-gradient(90deg, #74ebd5, #acb6e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #ddd;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .cta {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #74ebd5;
+            color: black;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .cta:hover {
+            background: #acb6e5;
+            transform: scale(1.1);
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #74ebd5;
+            margin: 20px auto;
+            animation: rotateIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes rotateIn {
+            from { transform: rotate(-360deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
+        }
+
+        #contact {
+            background: linear-gradient(135deg, #acb6e5, #74ebd5);
+            padding: 50px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #contact form input, #contact form textarea {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+        }
+
+        #contact form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #74ebd5;
+            color: black;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #contact form button:hover {
+            background: #acb6e5;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #74ebd5;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="me.jpg" alt="Kailas Mande" class="profile-image">
+            <h1>Hi, I'm Kailas Mande</h1>
+            <p>Frontend Developer</p>
+            <a href="#contact" class="cta">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a final-year student at Deogiri Institute of Engineering and Management Studies, specializing in Electronics and Telecommunication. With a passion for creating user-friendly solutions and a knack for quick learning, I aim to contribute to innovative projects.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>B.Tech - Electronics and Telecommunication (2025)</h3>
+                <p>Deogiri Institute of Engineering and Management Studies, Aurangabad</p>
+            </div>
+            <div class="timeline-item">
+                <h3>HSC - 68% (2021)</h3>
+                <p>Shri Rangnath Maharaj Jr. College, Jalna</p>
+            </div>
+            <div class="timeline-item">
+                <h3>SSC - 74% (2019)</h3>
+                <p>Shantiniketan Vidya Mandir School, Jalna</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>VS Code, PyCharm, IntelliJ</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Simple Calculator using Arduino Uno</h3>
+                <p>Designed a calculator with a 4x4 keypad and LCD for input and display.</p>
+            </div>
+            <div class="project-card">
+                <h3>Smart Waste Segregation System</h3>
+                <p>Automated waste sorting with Arduino Uno and sensors for sustainability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>Phone: +91-8956883179 | Email: kailasmande999@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Kailas Mande. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
